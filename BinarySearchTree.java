@@ -63,6 +63,25 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		// Ternary Operator
 		return (root == null) ? 0 : this.getSizeRecursive(root.left) + 1 + this.getSizeRecursive(root.right);
 	}
+	
+	//Ability to search 63 in the Binary Tree.
+	public boolean search(T data) {
+		return this.searchRecursive(root, data);
+	}
+
+	public boolean searchRecursive(MyBinaryNode<T> root, T data) {
+		if (root == null) {
+			return false;
+		} else if (data.compareTo(root.data) == 0) {
+			return true;
+		} else {
+			if (data.compareTo(root.data) < 0) {
+				return searchRecursive(root.left, data);
+			}else {
+				return searchRecursive(root.right, data);
+			}
+		}
+	}
 
 	// Main Method
 	public static void main(String[] args) {
@@ -95,5 +114,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		bst.postOrderTraversal(root);
 
 		System.out.println("\n\nSize of the Binary Search Tree :- " + bst.size());
+		
+
+		System.out.println("\nSearch result :- " + bst.search(63));
 	}
 }
