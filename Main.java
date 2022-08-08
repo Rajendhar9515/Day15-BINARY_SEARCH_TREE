@@ -1,9 +1,11 @@
 package com.binary.search.tree;
 
 public class Main {
+
 	public static void main(String[] args) {
 		HashTable<String, Integer> hashImpl = new HashTable<>();
-		String message = "To be or not to be";
+		String message = "Paranoids are not paranoid because they are paranoid but "
+				+ "because they keep putting themselves deliberately into paranoid avoidable situations";
 
 		String[] messageArray = message.toLowerCase().split(" ");
 
@@ -12,10 +14,10 @@ public class Main {
 
 			if (value == null) {
 				value = 1;
-			}else {
+			} else {
 				value = value + 1;
-			hashImpl.add(word, value);
 			}
+			hashImpl.add(word, value);
 		}
 		System.out.println(hashImpl);
 	}
