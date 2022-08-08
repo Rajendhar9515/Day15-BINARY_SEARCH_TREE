@@ -14,8 +14,8 @@ public class Main {
 				value = 1;
 			}else {
 				value = value + 1;
+			}	
 			hashImpl.add(word, value);
-			}
 		}
 		System.out.println(hashImpl);
 	}
