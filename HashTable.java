@@ -1,4 +1,4 @@
-package com.binary.search.tree;
+package com.bridgelabz.hash_table;
 
 class HashTable<K, V> {
 
