@@ -18,8 +18,10 @@ public class Main {
 				value = value + 1;
 			map.add(word, value);
 		}
+		map.printNodes();
 		System.out.println(map.size());
 		map.remove("avoidable");
+		map.printNodes();
 		System.out.println(map.size());
 	}
 }
