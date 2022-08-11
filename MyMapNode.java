@@ -1,4 +1,4 @@
-package com.binary.search.tree;
+package com.bridgelabz.hash_table;
 
 public class MyMapNode<K, V> {
 	K key;
