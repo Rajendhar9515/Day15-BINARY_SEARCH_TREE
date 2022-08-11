@@ -79,6 +79,7 @@ class HashTable<K, V> {
     }
 
     public void printNodes() {
-        System.out.println("My nodes: " + head);
-    }
+        if(head != null) {
+		System.out.println("My nodes: " + head);
+		}
 }
